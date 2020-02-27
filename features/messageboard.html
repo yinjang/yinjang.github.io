@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>留言-音扬Project</title>
+	<!--网站标志-->
+	<link rel="shortcut icon" href="../images/logo240x290.png">
+
+	<link href="../css/style_messageboard.css" rel='stylesheet' type='text/css' />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords"
+		content="Pink Contact Form ,Login Forms,Sign up Forms,Registration Forms,News latter Forms,Elements" . />
+	<script type="application/x-javascript">
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+
+	<!--网站字体导入-->
+	<link
+		href="https://fonts.loli.net/css?family=Long+Cang|Raleway:200,300,400,500,600,700|ZCOOL+XiaoWei&display=swap&subset=chinese-simplified,latin-ext"
+		rel="stylesheet">
+	<!--//网站字体导入-->
+	<!--webfonts-->
+	<!--
+<link href='http://fonts.useso.com/css?family=Lato:100,300,400,700,100italic,300italic,400italic|Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.useso.com/css?family=Raleway:400,200,300,500,600,800,700,900' rel='stylesheet' type='text/css'>
+-->
+	<!--//webfonts-->
+</head>
+
+<body>
+	<a href="../index.html">
+		<img src="../images/logo200x200.png" style="position: absolute;z-index: 1;margin-left: 2em;" width="70px"/>
+	</a>
+	<h1 style="font-family: ZCool xiaowei;">BUG反馈</h1>
+	<div class="login-01">
+		<form>
+			<ul>
+				<li class="first">
+					<a href="#" class=" icon user"></a>
+					<input value="姓名" onfocus="javascipt:this.value = ''" type="text" id="name" class="text"
+						onBlur="if (this.value == '') {this.value = '不然我怎么称呼您呢?';}">
+					<div class="clear"></div>
+				</li>
+				<li class="first">
+					<a href="#" class=" icon email"></a><input type="text" class="text" value="Email" type="text"
+						id="email" onfocus="this.value = ''"
+						onBlur="if (this.value == '') {this.value = '咱们说悄悄话的方式~';}">
+					<div class="clear"></div>
+				</li>
+				<!--//-->
+				<!--屏蔽电话功能-->
+				<!--
+				<li class="first">
+					<a href="#" class=" icon phone"></a><input type="text" class="text" value="Phone" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Phone';}" >
+					<div class="clear"></div>
+				</li>
+				-->
+				<!--//-->
+				<li class="second">
+					<a href="#" class=" icon msg"></a><textarea value="Message" onfocus="javascript:this.value = ''"
+						id="comments"
+						onBlur="if (this.value == '') {this.value = '不说算了哼╭(╯^╰)╮';}" type>请输入您的建议......</textarea>
+					<div class="clear"></div>
+				</li>
+			</ul>
+			<input type="submit" onClick="checkform()" value="提交" style="font-family: zcool xiaowei;">
+			<div class="clear"></div>
+		</form>
+	</div>
+	<!--start-copyright-->
+	<div class="copy-right">
+		<div class="wrap">
+			<p>Copyright &copy; YinJang Project. <br>
+				感谢您的反馈!</p>
+		</div>
+	</div>
+	<!--//end-copyright-->
+</body>
+
+<!--对话框脚本-->
+<script type="text/javascript">
+	function checkform() {
+		var b_n=(document.getElementById('name').value == "姓名"||document.getElementById('name').value == "不然我怎么称呼您呢?");
+		var b_e=(document.getElementById('email').value == "Email"||document.getElementById('email').value == "咱们说悄悄话的方式~");
+		var b_c=(document.getElementById('comments').value == "请输入您的建议......"||document.getElementById('comments').value == "不说算了哼╭(╯^╰)╮");
+		if(b_n||b_e||b_c){
+			alert('\r        乖!       乖!        填!        好!');
+			document.getElementById('name').focus();
+			return false;
+		}else{
+			alert('您的建议已经到达开发者那儿啦~');
+		}
+	}
+</script>
+
+</html>
