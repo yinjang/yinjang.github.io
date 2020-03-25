@@ -2,7 +2,10 @@
 
 /** 1. Basic
 *******************************************************************/
-
+@font-face{
+    font-family: 'Bellefair', serif;
+    src: url(../../fonts/Bellefair/Bellefair-Regular.ttf);
+}
 html
 {
     font-size: 10px !important;

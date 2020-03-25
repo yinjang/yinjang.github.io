@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="shortcut icon" href="../images/logo95x115.png">
+    <link rel="shortcut icon" href="images/logo240x290.png">
     <link rel="stylesheet" href="../css/style.css">
-    <!--导入字体-->
-    <link href="https://fonts.loli.net/css?family=ZCOOL+XiaoWei&display=swap&subset=chinese-simplified"rel="stylesheet">
 </head>
 
 <body>
@@ -13,19 +11,13 @@
         <center>正在开发中......</center>
     </div>
     <br>
-    <div><a href="../index.html" style="font-family: zcool xiaowei; font-size: 20px;">
+    <div>
+        <a href="../index.html" style="font-family: zcool xiaowei; font-size: 20px;">
             <center>点我返回主页</center>
-        </a></div>
-        
-    <input type="text" id="in" name="in" />
-    <input type="button" value="Write!"
-        οnclick="writeFile('/Users/sekay/Downloads/comments.txt',document.getElementById('in').value);" />
-    <br><br>
-    <input type="button" value="Read!" οnclick="document.getElementById('show').value=readFile('c:/12.txt');" />
-    <br>
+        </a>
+    </div>
+    <input type="button" onclick="writes()" value="start" />
 
-    <textarea id="show" name="show" cols="50" rows="8">
-</textarea>
 </body>
 <script type="text/javascript">
     /*
@@ -35,20 +27,22 @@
     ForWriting=2          以写方式打开文件
     ForAppending= 8       打开文件并从文件末尾开始写。
     */
+    function writes() {
+        //document.write("Hello World!")
+        var oFso, oFile, sFile, sContent;
+        sFile = "../comments.txt";
 
-    var oFso, oFile, sFile, sContent;
-    sFile = "/Users/sekay/Downloads/comments.txt";
+        //写文件
+        oFso = new ActiveXObject("Scripting.FileSystemObject");
+        oFile = oFso.OpenTextFile(sFile, 2, true); //写方式打开
+        oFile.WriteLine("菩提本无树，明镜亦非台，本来无一物，何处惹尘埃!");
+        oFile.Close();
 
-    //写文件
-    oFso = new ActiveXObject("Scripting.FileSystemObject");
-    oFile = oFso.OpenTextFile(sFile, 2, true); //写方式打开
-    oFile.WriteLine("菩提本无树，明镜亦非台，本来无一物，何处惹尘埃!");
-    oFile.Close();
+        //读文件
+        oFile = oFso.OpenTextFile(sFile, 1); //只读方式打开
+        sContent = oFile.ReadLine();
+        oFile.Close();
 
-    //读文件
-    oFile = oFso.OpenTextFile(sFile, 1); //只读方式打开
-    sContent = oFile.ReadLine();
-    oFile.Close();
-
-    document.write(sFile + "文件内容为：<br/><br/>" + sContent);
+        document.write(sFile + "文件内容为：<br/><br/>" + sContent);
+    }
 </script>

@@ -1,9 +1,37 @@
-.cn{
-    font-family: "ZCOOL XiaoWei";
+@font-face {
+    font-family: 'Long Cang';
+    src: url(../fonts/Long_Cang/LongCang-Regular.ttf);
 }
-.en{
-    font-family: 'Raleway';
+
+@font-face {
+    font-family: 'ZCOOL XiaoWei', serif;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/ZCOOL_XiaoWei/ZCOOLXiaoWei-Regular.ttf);
 }
+
+@font-face {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    src: url(../fonts/Raleway/Raleway-Light.ttf);
+}
+
+
+.article {
+    font-family: 'Long Cang';
+}
+
+.sp {
+    font-family: 'ZCOOL XiaoWei', serif;
+    font-weight: 200;
+}
+
+.en {
+    font-family: 'Raleway', sans-serif;
+}
+
+
+
 html {
     line-height: 1.15;
     -ms-text-size-adjust: 100%;
@@ -45,7 +73,6 @@ hr {
 }
 
 pre {
-    font-family: monospace, monospace;
     font-size: 1em
 }
 
@@ -74,7 +101,6 @@ strong {
 code,
 kbd,
 samp {
-    font-family: monospace, monospace;
     font-size: 1em
 }
 
@@ -130,7 +156,6 @@ input,
 optgroup,
 select,
 textarea {
-    font-family: sans-serif;
     font-size: 100%;
     line-height: 1.15;
     margin: 0
@@ -356,13 +381,6 @@ body {
     font-size: 1rem
 }
 
-body,
-button,
-input,
-select,
-textarea {
-    font-family: "Heebo", sans-serif
-}
 
 a {
     color: #535FD7;
@@ -389,7 +407,6 @@ h6,
 .h6 {
     clear: both;
     color: #182538;
-    font-family: "IBM Plex Sans", sans-serif;
     font-weight: 600
 }
 
@@ -576,22 +593,6 @@ address {
 }
 
 pre,
-pre h1,
-pre h2,
-pre h3,
-pre h4,
-pre h5,
-pre h6,
-pre .h1,
-pre .h2,
-pre .h3,
-pre .h4,
-pre .h5,
-pre .h6 {
-    font-family: "Courier 10 Pitch", Courier, monospace
-}
-
-pre,
 code,
 kbd,
 tt,
@@ -614,7 +615,6 @@ code,
 kbd,
 tt,
 var {
-    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
     font-size: 16px;
     padding: 2px 4px
 }
@@ -694,7 +694,6 @@ label {
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
     display: block;
-    font-family: "IBM Plex Sans", sans-serif;
     font-size: 14px;
     letter-spacing: 0px;
     font-weight: 600;
@@ -1302,7 +1301,6 @@ label {
 
 .button {
     display: inline-flex;
-    font-family: "ZCOOL QingKe HuangYou", sans-serif;
     font-size: 20px;
     letter-spacing: 2px;
     font-weight: 400;
@@ -1320,7 +1318,8 @@ label {
     text-align: center;
     white-space: nowrap
 }
-.button_mainpage{
+
+.button_mainpage {
     display: inline-flex;
     font-family: "ZCOOL xiaowei", sans-serif;
     font-size: 20px;
